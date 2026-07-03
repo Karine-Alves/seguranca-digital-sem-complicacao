@@ -66,6 +66,7 @@
     #mensagem {
       font-weight: bold;
       color: #06345c;
+      margin-bottom: 18px;
     }
 
     iframe {
@@ -98,7 +99,7 @@
         segurança digital e cuidados para evitar golpes na internet.
       </p>
 
-      <button onclick="mostrarMensagem()">Clique para ver uma dica</button>
+      <button id="botaoDica">Clique para ver uma dica</button>
 
       <p id="mensagem"></p>
 
@@ -114,10 +115,13 @@
   </footer>
 
   <script>
-    function mostrarMensagem() {
-      document.getElementById("mensagem").innerText =
+    const botao = document.getElementById("botaoDica");
+    const mensagem = document.getElementById("mensagem");
+
+    botao.addEventListener("click", function () {
+      mensagem.textContent =
         "Dica: nunca compartilhe senhas ou códigos recebidos por mensagem.";
-    }
+    });
   </script>
 </body>
 </html>
