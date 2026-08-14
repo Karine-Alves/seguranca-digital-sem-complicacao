@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Segurança Digital Sem Complicação</title>
 
   <style>
@@ -48,6 +49,10 @@
       margin-top: 0;
     }
 
+    .descricao {
+      line-height: 1.6;
+    }
+
     button {
       background-color: #06345c;
       color: white;
@@ -85,6 +90,7 @@
 </head>
 
 <body>
+
   <header>
     <h1>Segurança Digital Sem Complicação</h1>
     <p>Projeto de Atividade Extensionista II</p>
@@ -92,21 +98,28 @@
 
   <main>
     <section>
-      <h2>Meu ebook</h2>
 
-      <p>
-        Esse é o ebook que fiz para o projeto. Ele traz dicas simples sobre
-        segurança digital e cuidados para evitar golpes na internet.
+      <h2>Segurança Digital Sem Complicação</h2>
+
+      <p class="descricao">
+        Um guia prático com informações e orientações para ajudar
+        a navegar pela internet com mais segurança.
       </p>
 
-      <button id="botaoDica">Clique para ver uma dica</button>
+      <p class="descricao">
+        Confira dicas para identificar golpes, proteger seus dados
+        pessoais e evitar situações de risco no ambiente digital.
+      </p>
+
+      <button id="botaoDica">Ver uma dica de segurança</button>
 
       <p id="mensagem"></p>
 
       <iframe
         src="ebook.pdf"
-        title="Ebook Segurança Digital Sem Complicação">
+        title="Guia Segurança Digital Sem Complicação">
       </iframe>
+
     </section>
   </main>
 
@@ -118,10 +131,11 @@
     const botao = document.getElementById("botaoDica");
     const mensagem = document.getElementById("mensagem");
 
-    botao.addEventListener("click", function () {
+    botao.addEventListener("click", function() {
       mensagem.textContent =
         "Dica: nunca compartilhe senhas ou códigos recebidos por mensagem.";
     });
   </script>
+
 </body>
 </html>
